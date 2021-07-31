@@ -1,0 +1,171 @@
+/*margen*/
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+/*body-letra*/
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/*body-letra*/
+h1, h2, h3, h4, h5, h6{
+    color: #1d273b;
+    font-weight: 300;
+}
+
+.contenedor{
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+
+
+
+h1{
+    font-size: 50px;
+}
+
+/*Header*/
+
+header::before{
+    content: "";
+    display: block;
+    margin-bottom: 90px;
+}
+
+nav{
+    width: 100%;
+    height: 90px;
+    background: #fff;
+    border-bottom: 1px solid transparent;
+    box-shadow: 1px 1px 10px 0 rgba(0, 0,0,.2);
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    
+    transition: color 0.5 ease-in;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    height: 90px;
+    width: 100%;
+    align-items: center;
+    padding: 0 40px;
+}  
+
+.nav .logo{
+    height: 80px;
+    
+}
+
+
+.nav .logo img{
+  
+    height: 100%;
+    vertical-align: top;
+    
+}
+
+.enlaces-header{
+    font-weight: 300;
+    margin-left: 20px;
+}
+
+.nav .enlaces-header a{
+    color: #5D6678;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+
+
+.nav.menudos{
+    -webkit-clip-path: circle(133.8% at 100% 0);
+    clip-path: circle(138.4% at 100% 0);
+
+}
+
+
+
+.contenido-header{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.contenido-header>img{
+    width: 550px;
+    /*tiempo de animacion*/
+    animation: ease-in animat1 1s;
+}
+
+/*animacion*/
+@keyframes animat1{
+    0%{
+        transform: scale(0);
+    }100%{
+    transform: scale(1);
+    }
+}
+
+.textos-header{
+   margin: 0 0 0 30px; 
+}
+
+.contenido-header p{
+    font-weight: 100;
+    margin-top: 14px;
+    color: #1d273b;
+}
+
+/*boton*/
+.contenido-header a{
+    margin:  28px 0 0 0;
+    width: 130px;
+    display: inline-block;
+    background: #FFFF00;
+    text-align: center;
+    color: #000;
+    padding: 12px 0;
+    text-decoration: none;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 14px;
+    border-radius: 5px;
+    /*sombra*/
+    box-shadow: 0 8px 32px rgba(0, 0, 255, 0.829);
+    
+}
+
+
+
+
+/* .container{
+    height: 230px; 
+    overflow-y: auto;
+    width: 100px;
+
+} */
+
+
+/* .container thead,
+.container tbody,
+.container td,
+.container th{
+    display: block;
+}
+
+.container tbody td,
+.container thead > tr > th{
+    float: left;
+    border-bottom-width: 0 ;
+} */

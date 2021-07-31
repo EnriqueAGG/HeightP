@@ -1,0 +1,206 @@
+body { 
+  background-color: #F9F9F9;
+}
+
+
+/*margen*/
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+/*body-letra*/
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+/*body-letra*/
+h1, h2, h3, h4, h5, h6{
+    color: #1d273b;
+    font-weight: 300;
+}
+
+.contenedor{
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+
+/*espacio del padding*/
+.contenedor1{
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+    padding: 60px 0;
+}
+
+h1{
+    font-size: 50px;
+}
+
+/*Header*/
+
+header::before{
+    content: "";
+    display: block;
+    margin-bottom: 90px;
+}
+
+nav{
+    width: 100%;
+    height: 90px;
+    background: #fff;
+    border-bottom: 1px solid transparent;
+    box-shadow: 1px 1px 10px 0 rgba(0, 0,0,.2);
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    
+    transition: color 0.5 ease-in;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    height: 90px;
+    width: 100%;
+    align-items: center;
+    padding: 0 40px;
+}  
+
+.nav .logo{
+    height: 80px;
+    
+}
+
+
+.nav .logo img{
+  
+    height: 100%;
+    vertical-align: top;
+    
+}
+
+.enlaces-header{
+    font-weight: 300;
+}
+
+.nav .enlaces-header a{
+    color: #5D6678;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+
+
+.nav.menudos{
+    -webkit-clip-path: circle(133.8% at 100% 0);
+    clip-path: circle(138.4% at 100% 0);
+
+}
+
+
+
+.contenido-header{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.contenido-header>img{
+    width: 550px;
+    /*tiempo de animacion*/
+    animation: ease-in animat1 1s;
+}
+
+/*animacion*/
+@keyframes animat1{
+    0%{
+        transform: scale(0);
+    }100%{
+    transform: scale(1);
+    }
+}
+
+.textos-header{
+   margin: 0 0 0 30px; 
+}
+
+.contenido-header p{
+    font-weight: 100;
+    margin-top: 14px;
+    color: #1d273b;
+}
+
+/* ------ */
+
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+
+
+body{
+    margin: 0;
+    font-size: .9rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #212529;
+    text-align: left;
+    background-color: #f5f8fa;
+}
+
+.navbar-laravel
+{
+    box-shadow: 0 2px 4px rgba(0,0,0,.04);
+}
+
+.navbar-brand , .nav-link, .my-form, .login-form
+{
+    font-family: Raleway, sans-serif;
+}
+
+.my-form
+{
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.my-form .row
+{
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.login-form
+{
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.login-form .row
+{
+    margin-left: 0;
+    margin-right: 0;
+}
+
+
+.profile-img-card {
+  width: 96px;
+  height: 96px;
+  margin: 0 auto 10px;
+  display: block;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+
+/* .btn.btn-signin:hover{ }*/
+
+.btn.btn-signin:hover,
+.btn.btn-signin:active,
+.btn.btn-signin:focus {
+    background-color: rgba(0, 0, 3, 0.568);
+}
