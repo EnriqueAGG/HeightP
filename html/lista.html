@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HEIGHT</title>
     <link rel="shortcut icon" href="https://img.icons8.com/color/10/000000/ruler.png">
-    <link rel="stylesheet" href="../css/usuario.css">
+    <link rel="stylesheet" href="../css/lista.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -20,22 +20,22 @@
                 <div class="logo">
                     <img src="../img/height.png" alt="" class="img-fluid">
                 </div>
+                <div class="empresa_nombre fs-2 fw-bold text-primary">
+
+                </div>
                 <div class="enlaces-header">
-                    <a href="../index.html">Inicio</a>
-                    <a href="usuario.html">Logearte</a>
-                   <a href="lista.html">LISTA</a>
-                   
+                   <button class="btn btn-danger " id="btn_logout">Cerrar sesión</button>
                 </div>
             </selection>
     </header>
 
 
     <section>
-      <div class="conteiner">
+      <div class="mt-5">
         <div class="modal-footer d-flex justify-content-center align-items-center">
-          <div class=" text-center border ">
-            <button type="button" class="btn btn-info " data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-            EDITAR
+          <div class=" text-center ">
+            <button type="button" class="btn btn-primary my-3 mb-4" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            Agregar registro
             </button>
           </div>
             </div>
@@ -49,29 +49,28 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header bg-info">
-        <h5 class="modal-title text-dark" id="staticBackdropLabel"> UNA NUEVA PERSONA</h5>
+        <h5 class="modal-title text-dark" id="staticBackdropLabel"> Agrega un nuevo registro</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form>
-          <!-- <div class="mb-3">
-            <label for="recipient-name" class="col-form-label">ID:</label>
-            <input type="text" class="form-control" id="recipient-name">
-          </div> -->
+    
+      
           <div class="mb-3">
-            <label for="recipient-name" class="col-form-label">NOMBRE:</label>
-            <input type="text" class="form-control" id="recipient-name">
+            <label for="recipient-name" class="col-form-label">Nombre de la persona:</label>
+            <input type="text" class="form-control" id="nombre_persona">
           </div>
           <div class="mb-3">
-            <label for="recipient-name" class="col-form-label">ALTURA:</label>
-            <input type="text" class="form-control" id="recipient-name">
+            <label for="recipient-name" class="col-form-label">Altura(cm):</label>
+            <div class="caja">
+              <input type="text" class="form-control" id="altura" disabled class="inpit_altura" value="100">
+            <button class="btn btn-primary btn_traer" id="btn_obtener_altura">Obtener altura</button>
+            </div>
           </div>
       </div>
-      </form>
+
       <div class="modal-footer">
-        <button type="button" class="btn btn-warning" data-bs-dismiss="modal">CERRAR</button>
-        <button type="button" class="btn btn-success">ACEPTAR</button>
-         <button type="button" class="btn btn-warning" >TRAER DATO</button>
+        <button type="button" class="btn btn-success" id="btn_registro_altura">Crear registro</button>
+        <button class="btn btn-warning" id="btn_reset">Resetear campos</button>
       </div>
     </div>
   </div>
@@ -83,22 +82,17 @@
        <div class="row">
          <div class="col-lg-12">
            <div class="table-responsive">
-             <table id="tablaAltura" class="table table-striped table-border table-condensed" style="width: 100%;">
+             <table id="tablaAltura" class="table table-striped table-hover table-bordered align-middle" style="width: 100%;">
                <thead class="text-center">
                  <tr>
-                     
+                     <th>#</th>
                      <th>Nombre</th>
                      <th>Altura</th>
                      <th>OPCIONES</th>
                  </tr>
                </thead>
-               <tbody>
-                 <tr>
-                   <th></th>
-                   <th></th>
-                   <th></th>
-                   <th><button id="" type="button" class="btn btn-success">Eliminar</button></th>
-                 </tr>
+               <tbody id="tbody" class="text-center">
+                 <!--  -->
                </tbody>
              </table>
            </div>
@@ -107,53 +101,13 @@
      </div>
     </section>
 
-        <!-- <div class="container">
-
-            <table class="table table table-dark table-striped table-hover" style="width: 100%";>
-                <thead>
-                  <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Handle</th>
-                  </tr>
-                </thead>
-                <tbody>
-                 
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td colspan="2">Larry the Bird</td>
-                    <td>@twitter</td>
-                  </tr>
-                </tbody>
-              </table>
-        </div>-->
 
    
   
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-
-    <script>
-      var myModal = document.getElementById('myModal')
-var myInput = document.getElementById('myInput')
-
-myModal.addEventListener('shown.bs.modal', function () {
-  myInput.focus()
-})
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.0/dist/sweetalert2.all.min.js"></script>
+    
     <script src="../js/Lista.js"></script>
 </body>
 

@@ -169,3 +169,21 @@ nav{
     float: left;
     border-bottom-width: 0 ;
 } */
+.caja{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+.inpit_altura{
+    display: inline-block;
+    width: 50%;
+}
+.btn_traer{
+    width: 50%;
+    margin-left: 1em;
+}
+.extender{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
